@@ -1,0 +1,7 @@
+@use "utils" as *;
+
+.form-header {
+  @include reset-headers;
+  @include reset-paragraph;
+  padding-bottom: 40px;
+}

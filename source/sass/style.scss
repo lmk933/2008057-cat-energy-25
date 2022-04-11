@@ -1,1 +1,25 @@
-// Начните писать стили здесь
+@use "global";
+@use "fonts";
+@use "index/main-container";
+@use "index/advantages";
+@use "index/feed-program";
+@use "index/example";
+@use "index/program-catalog";
+@use "index/feed-program-item";
+@use "form/program-form";
+@use "form/additional-info";
+@use "form/comment";
+@use "form/form-header";
+@use "form/owner-contacts";
+@use "catalog/additional-products";
+@use "catalog/catalog";
+@use "catalog/gift";
+@use "catalog/main-catalog-card";
+@use "catalog/main-catalog-secondary-card";
+@use "catalog/main-products";
+@use "common/main-footer";
+@use "common/page";
+@use "common/main-header";
+@use "common/button";
+@use "common/contacts";
+@use "common/copyright";

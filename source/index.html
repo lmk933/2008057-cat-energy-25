@@ -4,30 +4,33 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page__body">
   <header class="main-header">
-    <div class="main-header__logo-wrapper">
-      <a class="main-header__logo-icon">
-        <img class="main-header__logo-icon-image" src="img/logo-icon.svg" width="34" height="38" alt="Cat Energy">
-      </a>
-      <a class="main-header__logo-title">
-        <img class="main-header__logo-title-image" src="img/logo-title.svg" width="100" height="18" alt="Cat Energy">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list nav-list">
-          <li class="nav-list__item nav-list__item--active"><a>Главная</a></li>
-          <li class="nav-list__item"><a>Каталог продукции</a></li>
-          <li class="nav-list__item"><a>Подбор программы</a></li>
-        </ul>
+    <div class="main-header__wrapper">
+      <div class="main-header__logo-wrapper">
+        <a class="main-header__logo-icon">
+          <img class="main-header__logo-icon-image" src="img/logo-icon.svg" width="34" height="38" alt="Cat Energy">
+        </a>
+        <a class="main-header__logo-title">
+          <img class="main-header__logo-title-image" src="img/logo-title.svg" width="100" height="18" alt="Cat Energy">
+        </a>
       </div>
-    </nav>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list nav-list">
+            <li class="nav-list__item nav-list__item--active"><a>Главная</a></li>
+            <li class="nav-list__item"><a>Каталог продукции</a></li>
+            <li class="nav-list__item"><a>Подбор программы</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Cat Energy — функциональное питание для котов</h1>
@@ -65,7 +68,7 @@
     </section>
     <section class="advantages">
       <div class="advantages__wrapper">
-        <h2 class="advantages__header">Как это работает</h2>
+        <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--healthy">
             <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
@@ -94,7 +97,7 @@
         <div class="example__metrics-wrapper">
           <dl class="example__metrics-list">
             <div class="example__metrics-item">
-              <dt class="example__metrics-number">
+              <dt class="example__metrics-value">
                 5 кг
               </dt>
               <dd class="example__metrics-description">
@@ -103,7 +106,7 @@
               </dd>
             </div>
             <div class="example__metrics-item">
-              <dt class="example__metrics-number">
+              <dt class="example__metrics-value">
                 60 дней
               </dt>
               <dd class="example__metrics-description">
@@ -124,91 +127,60 @@
         </div>
       </div>
     </section>
-    <footer class="main-footer">
-      <div class="main-footer__wrapper">
-        <div class="main-footer__contacts-wrapper">
-          <h2 class="visually-hidden">Контакты</h2>
-          <div class="main-footer__contacts-content contacts">
-            <div class="contacts__wrapper">
-              <div class="contacts__label-wrapper">
-                <p>приглашаем<br>к сотрудничеству дилеров!</p>
-                <address>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-              </div>
-            </div>
-            <div class="contacts__map-wrapper">
-              <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A92c6dc42839b7d9136024e9e5fc7d1e5bc8c69158a3a92aff959675aec6f5fc0&amp;source=constructor"></iframe>
-            </div>
-          </div>
-        </div>
-        <div class="main-footer__logo logo">
-        </div>
-        <div class="main-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Мы в Вконтакте</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Мы в Ютубе</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Мы в Телеграме</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="main-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </div>
-      </div>
-    </footer>
-    <footer class="main-footer">
-      <div class="main-footer__wrapper">
-        <div class="main-footer__contacts-wrapper">
-          <h2 class="visually-hidden">Контакты</h2>
-          <div class="main-footer__contacts-content contacts">
-            <div class="contacts__wrapper">
-              <div class="contacts__label-wrapper">
-                <p>приглашаем<br>к сотрудничеству дилеров!</p>
-                <address>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-              </div>
-            </div>
-            <div class="contacts__map-wrapper">
-              <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A92c6dc42839b7d9136024e9e5fc7d1e5bc8c69158a3a92aff959675aec6f5fc0&amp;source=constructor"></iframe>
-            </div>
-          </div>
-        </div>
-        <div class="main-footer__logo logo">
-        </div>
-        <div class="main-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Мы в Вконтакте</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Мы в Ютубе</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Мы в Телеграме</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="main-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </div>
-      </div>
-    </footer>
   </main>
+  <footer class="main-footer">
+    <div class="main-footer__wrapper">
+      <div class="main-footer__contacts-wrapper">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="main-footer__contacts-content contacts">
+          <div class="contacts__wrapper">
+            <div class="contacts__label-wrapper">
+              <p class="contacts__label-slogan">приглашаем<br>к сотрудничеству дилеров!</p>
+              <address class="contacts__label-address">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</address>
+            </div>
+          </div>
+          <div class="contacts__map-wrapper">
+            <iframe class="contacts__map"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A92c6dc42839b7d9136024e9e5fc7d1e5bc8c69158a3a92aff959675aec6f5fc0&amp;source=constructor"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="main-footer__miscellaneous">
+        <ul class="main-footer__miscellaneous-list">
+          <li class="main-footer__miscellaneous-item">
+            <div class="main-footer__logo logo">
+            </div>
+          </li>
+          <li class="main-footer__miscellaneous-item">
+            <div class="main-footer__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                    <span class="visually-hidden">Мы в Вконтакте</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                    <span class="visually-hidden">Мы в Ютубе</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                    <span class="visually-hidden">Мы в Телеграме</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="main-footer__miscellaneous-item">
+            <div class="main-footer__copyright copyright">
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -1,0 +1,16 @@
+@use "utils" as *;
+@use "colors" as *;
+@use "fonts" as *;
+
+.program-form {
+  @include reset-headers;
+  @include reset-paragraph;
+  background-color: $basic-white-color;
+  color: $basic-black-color;
+  font-family: $accent-font-family;
+  font-weight: 400;
+
+  .program-form__wrapper {
+    padding: 26px 20px 32px 20px;
+  }
+}

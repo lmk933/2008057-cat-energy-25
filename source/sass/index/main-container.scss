@@ -1,0 +1,9 @@
+@use "colors" as *;
+
+.main-container {
+  background-color: $basic-white-color;
+  color: $basic-black-color;
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+}

@@ -1,0 +1,21 @@
+@use "utils" as *;
+@use "fonts" as *;
+
+.feed-program {
+  @include reset-headers;
+  @include reset-paragraph;
+  font-family: $accent-font-family;
+  font-weight: 400;
+  padding-top: 26px;
+  padding-bottom: 20px;
+
+  .feed-program__header {
+    line-height: 36px;
+    font-size: 36px;
+  }
+
+  .feed-program__slogan {
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+}

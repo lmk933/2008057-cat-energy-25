@@ -1,0 +1,27 @@
+@mixin reset-headers {
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: inherit;
+  }
+}
+
+@mixin reset-paragraph {
+  p {
+    margin: 0;
+  }
+}
+
+@mixin reset-address {
+  address {
+    font-style: normal;
+  }
+}
+
+@mixin reset-link {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
