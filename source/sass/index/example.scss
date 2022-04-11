@@ -1,0 +1,43 @@
+@use 'utils'as *;
+
+.example {
+  @include reset-headers;
+  @include reset-paragraph;
+  background-color: $basic-gray-color;
+  color: $basic-black-color;
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  .example__title {
+    font-size: 36px;
+    line-height: 40px;
+    font-family: $accent-font-family;
+  }
+
+  .example__metrics-value {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-family: $accent-font-family;
+  }
+
+  .example__metrics-description {
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: lowercase;
+  }
+
+  .example__feed-price {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-family: $accent-font-family;
+  }
+
+  .example__slider-range-wrapper {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-family: $accent-font-family;
+  }
+}

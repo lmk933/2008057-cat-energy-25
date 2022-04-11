@@ -1,0 +1,25 @@
+@use 'utils'as *;
+
+.catalog {
+  @include reset-headers;
+  @include reset-paragraph;
+  background-color: $basic-white-color;
+  color: $basic-black-color;
+
+  .catalog__header {
+    font-family: $accent-font-family;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    border-bottom: 1px $basic-gray-color solid;
+    padding: 26px 20px 40px 20px;
+  }
+
+  .catalog__gift {
+    margin: 36px 20px 35px 20px;
+  }
+
+  .program-form__wrapper {
+    padding: 26px 20px 32px 20px;
+  }
+}

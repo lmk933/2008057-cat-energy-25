@@ -1,0 +1,9 @@
+@use 'utils'as *;
+
+.page__body {
+  background-color: $page-background-color;
+  color: $basic-black-color;
+  font-family: $regular-font-family;
+  font-size: 14px;
+  line-height: 18px;
+}

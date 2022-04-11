@@ -1,0 +1,15 @@
+@use 'utils'as *;
+
+.main-header {
+  background-color: $basic-white-color;
+  color: $basic-black-color;
+  font-family: $accent-font-family;
+  line-height: 24px;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px 20px 18px 20px;
+
+  .main-header__wrapper-underscored {
+    border-bottom: 1px $basic-gray-color solid;
+  }
+}

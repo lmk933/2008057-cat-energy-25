@@ -1,0 +1,15 @@
+@use 'utils'as *;
+
+.main-catalog-secondary-card__wrapper {
+  @include reset-paragraph;
+  background-color: $basic-white-color;
+  color: $basic-black-color;
+
+  .main-catalog-secondary-card__title {
+    font-family: $accent-font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+}

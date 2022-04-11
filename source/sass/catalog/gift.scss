@@ -1,0 +1,16 @@
+@use 'utils'as *;
+
+.gift {
+  $opacity: 0.85;
+  $gift-background-color: rgba($basic-green-color, $opacity);
+  background-color: $basic-green-color;
+  background: linear-gradient(to top, $gift-background-color, $gift-background-color),
+    url("../../img/gift-image.png") no-repeat;
+  color: $basic-white-color;
+  @include reset-link;
+
+  .gift__description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

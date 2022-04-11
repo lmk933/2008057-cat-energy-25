@@ -1,0 +1,14 @@
+@use 'utils'as *;
+
+.advantages {
+  @include reset-headers;
+  @include reset-paragraph;
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+  .advantages__title {
+    font-size: 36px;
+    line-height: 40px;
+    font-family: $accent-font-family;
+  }
+}

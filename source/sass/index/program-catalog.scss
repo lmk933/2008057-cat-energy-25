@@ -1,0 +1,7 @@
+@use 'utils'as *;
+
+.program-catalog {
+  @include reset-headers;
+  font-family: $accent-font-family;
+  font-weight: 400;
+}

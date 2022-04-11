@@ -1,0 +1,14 @@
+@use 'utils'as *;
+
+.feed-program-item {
+  @include reset-headers;
+  @include reset-paragraph;
+  background-color: $basic-gray-color;
+  color: $basic-black-color;
+
+  .feed-program-item__title {
+    font-size: 24px;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+}

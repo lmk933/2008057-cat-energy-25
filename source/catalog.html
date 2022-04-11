@@ -4,30 +4,33 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page__body">
   <header class="main-header">
-    <div class="main-header__logo-wrapper">
-      <a class="main-header__logo-icon">
-        <img class="main-header__logo-icon-image" src="img/logo-icon.svg" width="34" height="38" alt="Cat Energy">
-      </a>
-      <a class="main-header__logo-title">
-        <img class="main-header__logo-title-image" src="img/logo-title.svg" width="100" height="18" alt="Cat Energy">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list nav-list">
-          <li class="nav-list__item nav-list__item--active"><a>Главная</a></li>
-          <li class="nav-list__item"><a>Каталог продукции</a></li>
-          <li class="nav-list__item"><a>Подбор программы</a></li>
-        </ul>
+    <div class="main-header__wrapper-underscored">
+      <div class="main-header__logo-wrapper">
+        <a class="main-header__logo-icon">
+          <img class="main-header__logo-icon-image" src="img/logo-icon.svg" width="34" height="38" alt="Cat Energy">
+        </a>
+        <a class="main-header__logo-title">
+          <img class="main-header__logo-title-image" src="img/logo-title.svg" width="100" height="18" alt="Cat Energy">
+        </a>
       </div>
-    </nav>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list nav-list">
+            <li class="nav-list__item nav-list__item--active"><a>Главная</a></li>
+            <li class="nav-list__item"><a>Каталог продукции</a></li>
+            <li class="nav-list__item"><a>Подбор программы</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="catalog">
     <h1 class="catalog__header">Каталог продукции</h1>
@@ -169,10 +172,10 @@
         </li>
       </ul>
     </section>
-    <section class="catalog__additional-catalog additional-catalog">
-      <h2 class="additional-catalog__header visually-hidden">Дополнительные товары</h2>
-      <ul class="additional-catalog__list">
-        <li class="additional-catalog__item additional-catalog-card">
+    <section class="catalog__additional-catalog additional-products">
+      <h2 class="additional-products__header visually-hidden">Дополнительные товары</h2>
+      <ul class="additional-products__list">
+        <li class="additional-products__item additional-catalog-card">
           <div class="additional-catalog-card__wrapper">
             <p class="additional-catalog-card__title">Сахарозаменитель</p>
             <p class="additional-catalog-card__unit">1 упаковка (100 г)</p>
@@ -180,7 +183,7 @@
             <button class="additional-catalog-card__make-order button">Заказать</button>
           </div>
         </li>
-        <li class="additional-catalog__item additional-catalog-card">
+        <li class="additional-products__item additional-catalog-card">
           <div class="additional-catalog-card__wrapper">
             <p class="additional-catalog-card__title">Питьевая вода</p>
             <p class="additional-catalog-card__unit">5 литров</p>
@@ -188,7 +191,7 @@
             <button class="additional-catalog-card__make-order button">Заказать</button>
           </div>
         </li>
-        <li class="additional-catalog__item additional-catalog-card">
+        <li class="additional-products__item additional-catalog-card">
           <div class="additional-catalog-card__wrapper">
             <p class="additional-catalog-card__title">Молоко</p>
             <p class="additional-catalog-card__unit">1 литр</p>
@@ -196,7 +199,7 @@
             <button class="additional-catalog-card__make-order button">Заказать</button>
           </div>
         </li>
-        <li class="additional-catalog__item additional-catalog-card">
+        <li class="additional-products__item additional-catalog-card">
           <div class="additional-catalog-card__wrapper">
             <p class="additional-catalog-card__title">Витамины</p>
             <p class="additional-catalog-card__unit">1 упаковка (30 г)</p>
@@ -221,38 +224,49 @@
         <div class="main-footer__contacts-content contacts">
           <div class="contacts__wrapper">
             <div class="contacts__label-wrapper">
-              <p>приглашаем<br>к сотрудничеству дилеров!</p>
-              <address>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+              <p class="contacts__label-slogan">приглашаем<br>к сотрудничеству дилеров!</p>
+              <address class="contacts__label-address">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</address>
             </div>
           </div>
           <div class="contacts__map-wrapper">
-            <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A92c6dc42839b7d9136024e9e5fc7d1e5bc8c69158a3a92aff959675aec6f5fc0&amp;source=constructor"></iframe>
+            <iframe class="contacts__map"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A92c6dc42839b7d9136024e9e5fc7d1e5bc8c69158a3a92aff959675aec6f5fc0&amp;source=constructor"></iframe>
           </div>
         </div>
       </div>
-      <div class="main-footer__logo logo">
-      </div>
-      <div class="main-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы в Вконтакте</span>
-            </a>
+      <div class="main-footer__miscellaneous">
+        <ul class="main-footer__miscellaneous-list">
+          <li class="main-footer__miscellaneous-item">
+            <div class="main-footer__logo logo">
+            </div>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Мы в Ютубе</span>
-            </a>
+          <li class="main-footer__miscellaneous-item">
+            <div class="main-footer__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                    <span class="visually-hidden">Мы в Вконтакте</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+                    <span class="visually-hidden">Мы в Ютубе</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                    <span class="visually-hidden">Мы в Телеграме</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Мы в Телеграме</span>
-            </a>
+          <li class="main-footer__miscellaneous-item">
+            <div class="main-footer__copyright copyright">
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </div>
           </li>
         </ul>
-      </div>
-      <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </div>
   </footer>
