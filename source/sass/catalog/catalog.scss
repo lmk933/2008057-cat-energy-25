@@ -1,4 +1,6 @@
 @use "utils" as *;
+@use "colors" as *;
+@use "fonts" as *;
 
 .catalog {
   @include reset-headers;
@@ -17,9 +19,5 @@
 
   .catalog__gift {
     margin: 36px 20px 35px 20px;
-  }
-
-  .program-form__wrapper {
-    padding: 26px 20px 32px 20px;
   }
 }

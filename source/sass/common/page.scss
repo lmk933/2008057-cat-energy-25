@@ -1,4 +1,6 @@
 @use "utils" as *;
+@use "colors" as *;
+@use "fonts" as *;
 
 .page__body {
   background-color: $page-background-color;

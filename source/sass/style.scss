@@ -1,4 +1,4 @@
-@use "utils" as *;
+@use "global";
 @use "fonts";
 @use "index/main-container";
 @use "index/advantages";
@@ -23,24 +23,3 @@
 @use "common/button";
 @use "common/contacts";
 @use "common/copyright";
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
