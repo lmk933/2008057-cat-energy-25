@@ -1,4 +1,4 @@
-@use 'utils'as *;
+@use "utils" as *;
 
 .main-catalog-secondary-card__wrapper {
   @include reset-paragraph;

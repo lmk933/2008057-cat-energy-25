@@ -1,14 +1,13 @@
-$page-background-color: #E5E5E5;
-$basic-white-color: #FFFFFF;
+$page-background-color: #e5e5e5;
+$basic-white-color: #ffffff;
 $basic-black-color: #000000;
-$basic-green-color: #68B738;
-$basic-gray-color: #F2F2F2;
+$basic-green-color: #68b738;
+$basic-gray-color: #f2f2f2;
 
-$regular-font-family: 'Arial';
-$accent-font-family: 'Oswald';
+$regular-font-family: "Arial";
+$accent-font-family: "Oswald";
 
 @mixin reset-headers {
-
   h1,
   h2,
   h3 {
