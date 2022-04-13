@@ -1,9 +1,11 @@
 @use "colors" as *;
+@use "global" as *;
+@use "utils" as *;
 
 .main-container {
+  @include root-container;
   background-color: $basic-white-color;
   color: $basic-black-color;
   flex-grow: 1;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 var(--main-container-horizontal-padding);
 }

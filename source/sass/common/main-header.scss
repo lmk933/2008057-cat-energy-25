@@ -1,16 +1,52 @@
 @use "colors" as *;
 @use "fonts" as *;
+@use "global" as *;
+@use "utils" as *;
 
 .main-header {
-  background-color: $basic-white-color;
-  color: $basic-black-color;
+  @include root-container;
   font-family: $accent-font-family;
   line-height: 24px;
   font-size: 18px;
   text-transform: uppercase;
-  padding: 10px 20px 18px 20px;
+  padding: 10px var(--main-container-horizontal-padding) 18px var(--main-container-horizontal-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .main-header__wrapper-underscored {
-    border-bottom: 1px $basic-gray-color solid;
+.main-header__logo-wrapper {
+  height: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    flex-direction: row;
+    padding: 24px var(--main-container-horizontal-padding) 24px var(--main-container-horizontal-padding);
+  }
+
+  .main-header__logo-wrapper {
+    height: 50px;
+    margin-right: auto;
+  }
+
+  .main-header__logo-title {
+    display: none;
+  }
+
+  .main-header__nav-toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header {
+    position: relative;
+    z-index: 1;
+  }
+
+  .main-header__logo-wrapper {
+    height: 60px;
   }
 }
