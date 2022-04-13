@@ -1,3 +1,20 @@
-.main-footer__miscellaneous {
+@use "utils" as *;
+@use "global" as *;
+
+.main-footer {
+  @include root-container;
+  padding: 0 var(--main-container-horizontal-padding);
+}
+
+.main-footer__miscellaneous-list {
   padding: 40px 20px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__miscellaneous-list {
+    flex-direction: row;
+  }
 }

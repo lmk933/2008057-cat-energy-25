@@ -18,3 +18,18 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+:root {
+  --main-container-horizontal-padding: 20px;
+}
+
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$max-content-width: 1440px;
+$min-content-width: 320px;
+
+@media (min-width: $tablet-width) {
+  :root {
+    --main-container-horizontal-padding: 30px;
+  }
+}

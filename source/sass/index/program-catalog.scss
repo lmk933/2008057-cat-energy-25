@@ -1,8 +1,25 @@
 @use "utils" as *;
 @use "fonts" as *;
+@use "global" as *;
 
 .program-catalog {
   @include reset-headers;
+  @include reset-list;
   font-family: $accent-font-family;
   font-weight: 400;
+}
+
+.program-catalog__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-catalog__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media (min-width: $desktop-width) {
+  .program-catalog__list {
+    flex-direction: row;
+  }
 }
