@@ -1,10 +1,12 @@
 @use "utils" as *;
 @use "colors" as *;
 @use "fonts" as *;
+@use "global" as *;
 
 .catalog {
   @include reset-headers;
   @include reset-paragraph;
+  @include root-container;
   background-color: $basic-white-color;
   color: $basic-black-color;
 
@@ -19,5 +21,17 @@
 
   .catalog__gift {
     margin: 36px 20px 35px 20px;
+  }
+}
+
+.catalog__additional-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__additional-products {
+    flex-direction: row;
   }
 }

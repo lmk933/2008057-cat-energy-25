@@ -1,3 +1,15 @@
+@use "global" as *;
+
 .owner-contacts {
   padding-top: 20px;
+}
+
+.owner-contacts__list {
+  display: grid;
+}
+
+@media (min-width: $desktop-width) {
+  .owner-contacts__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

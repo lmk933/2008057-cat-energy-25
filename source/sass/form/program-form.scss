@@ -1,10 +1,12 @@
 @use "utils" as *;
 @use "colors" as *;
 @use "fonts" as *;
+@use "global" as *;
 
 .program-form {
   @include reset-headers;
   @include reset-paragraph;
+  @include root-container;
   background-color: $basic-white-color;
   color: $basic-black-color;
   font-family: $accent-font-family;
@@ -12,5 +14,15 @@
 
   .program-form__wrapper {
     padding: 26px 20px 32px 20px;
+  }
+}
+
+.program-form__cat-information {
+  display: grid;
+}
+
+@media (min-width: $desktop-width) {
+  .program-form__cat-information {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
