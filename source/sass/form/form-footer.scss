@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.form-footer {
+  display: grid;
+}
+
+@media (min-width: $tablet-width) {
+  .form-footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

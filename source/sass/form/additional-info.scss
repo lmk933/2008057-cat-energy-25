@@ -1,3 +1,21 @@
+@use "global" as *;
+
 .additional-info {
   padding-top: 22px;
+}
+
+.additional-info__list {
+  display: grid;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-info__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-info__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
