@@ -10,16 +10,20 @@
 }
 
 .program-catalog__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
 }
 
-.program-catalog__item:not(:last-child) {
-  margin-bottom: 20px;
+@media (min-width: $tablet-width) {
+  .program-catalog__list {
+    row-gap: 30px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .program-catalog__list {
-    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
   }
 }

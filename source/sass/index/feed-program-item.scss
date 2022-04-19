@@ -1,15 +1,205 @@
 @use "utils" as *;
 @use "colors" as *;
+@use "fonts" as *;
+@use "global" as *;
+@use "sass:math";
 
 .feed-program-item {
   @include reset-headers;
   @include reset-paragraph;
+  @include reset-link;
   background-color: $basic-gray-color;
   color: $basic-black-color;
+  display: grid;
+  padding: 24px 20px 18px 22px;
+  grid-template-columns: auto 1fr;
+  row-gap: 15px;
+  column-gap: 19px;
+  align-items: center;
+  grid-template-areas:
+    "logo title"
+    "description description"
+    "button button";
+  position: relative;
+}
+
+.feed-program-item__title {
+  grid-area: title;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.feed-program-item__description {
+  grid-area: description;
+  padding-bottom: 23px;
+  border-bottom: 1px #D9D9D9 solid;
+  font-family: $regular-font-family;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.feed-program-item::before {
+  grid-area: logo;
+  content: " ";
+  height: 50px;
+  width: 50px;
+  background-color: $basic-green-color;
+  border-radius: 50%;
+}
+
+.feed-program-item--slim::after {
+  grid-area: logo;
+  content: " ";
+  background-image: url('../../img/cat-slim.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+  width: 36px;
+  position: absolute;
+  left: math.div(50px, 2) - math.div(36px, 2);
+}
+
+.feed-program-item--pro::after {
+  content: " ";
+  background-image: url('../../img/cat-pro.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 67px;
+  height: 28px;
+  position: absolute;
+  grid-area: logo;
+  left: math.div(50px, 2) - math.div(67px, 2);
+}
+
+.feed-program-item__show-catalog {
+  grid-area: button;
+  display: block;
+  position: relative;
+  font-size: 16px;
+  list-style: 16px;
+}
+
+.feed-program-item__show-catalog::after {
+  content: " ";
+  background-image: url('../../img/icon-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 12px;
+  position: absolute;
+  margin-left: 15px;
+  top: math.div(16px, 2) - math.div(12px, 2);
+}
+
+@media (min-width: $tablet-width) {
+  .feed-program-item {
+    padding: 77px 62px 53px 53px;
+    grid-template-columns: 1fr auto;
+    row-gap: 24px;
+    column-gap: 54px;
+    grid-template-areas:
+      "title logo"
+      "description logo"
+      "button logo";
+  }
 
   .feed-program-item__title {
-    font-size: 24px;
-    line-height: 36px;
-    text-transform: uppercase;
+    font-size: 36px;
+  }
+
+  .feed-program-item__description {
+    padding-bottom: 23px;
+    border-bottom: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .feed-program-item__show-catalog {
+    font-size: 20px;
+    list-style: 30px;
+  }
+
+  .feed-program-item::before {
+    height: 200px;
+    width: 200px;
+  }
+
+  .feed-program-item--slim::after {
+    height: 194px;
+    width: 140px;
+    left: math.div(200px, 2) - math.div(140px, 2);
+  }
+
+  .feed-program-item--pro::after {
+    width: 268px;
+    height: 112px;
+    left: math.div(200px, 2) - math.div(268px, 2);
+  }
+
+  .feed-program-item__show-catalog::after {
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 12px;
+    position: absolute;
+    margin-left: 15px;
+    top: math.div(16px, 2) - math.div(12px, 2);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feed-program-item {
+    padding: 47px 51px 59px 52px;
+    grid-template-columns: auto 1fr;
+    row-gap: 39px;
+    column-gap: 62px;
+    grid-template-areas:
+      "logo title"
+      "description description"
+      "button button";
+    max-width: 570px;
+    box-sizing: border-box;
+  }
+
+  .feed-program-item__title {
+    font-size: 36px;
+  }
+
+  .feed-program-item__description {
+    padding-bottom: 23px;
+    border-bottom: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .feed-program-item__show-catalog {
+    font-size: 20px;
+    list-style: 30px;
+  }
+
+  .feed-program-item::before {
+    height: 100px;
+    width: 100px;
+  }
+
+  .feed-program-item--slim::after {
+    height: 97px;
+    width: 70px;
+    left: math.div(100px, 2) - math.div(70px, 2);
+  }
+
+  .feed-program-item--pro::after {
+    height: 56px;
+    width: 134px;
+    left: math.div(100px, 2) - math.div(134px, 2);
+  }
+
+  .feed-program-item__show-catalog::after {
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 12px;
+    position: absolute;
+    margin-left: 15px;
+    top: math.div(16px, 2) - math.div(12px, 2);
   }
 }

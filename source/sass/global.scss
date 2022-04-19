@@ -34,3 +34,8 @@ $mobile-header-height: 65px;
     --main-container-horizontal-padding: 30px;
   }
 }
+@media (min-width: $desktop-width) {
+  :root {
+    --main-container-horizontal-padding: 110px;
+  }
+}
