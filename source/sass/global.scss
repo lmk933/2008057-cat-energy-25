@@ -27,6 +27,7 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 $max-content-width: 1440px;
 $min-content-width: 320px;
+$mobile-header-height: 65px;
 
 @media (min-width: $tablet-width) {
   :root {

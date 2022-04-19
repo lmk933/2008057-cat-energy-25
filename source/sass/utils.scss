@@ -36,6 +36,13 @@
   }
 }
 
+@mixin reset-button {
+  button {
+    border: none;
+    background-color: transparent;
+  }
+}
+
 @mixin root-container {
   max-width: $max-content-width;
   min-width: $min-content-width;

@@ -11,17 +11,13 @@
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__logo-wrapper">
-      <a class="main-header__logo-icon">
-        <img class="main-header__logo-icon-image" src="img/logo-icon.svg" width="34" height="38" alt="Cat Energy">
-      </a>
-      <a class="main-header__logo-title">
-        <img class="main-header__logo-title-image" src="img/logo-title.svg" width="100" height="18" alt="Cat Energy">
-      </a>
-      <button class="main-header__nav-toggle" type="button">
+      <a class="main-header__logo-icon"></a>
+      <a class="main-header__logo-title"></a>
+      <button class="main-header__nav-toggle main-header__nav-toggle--nav-closed main-header__nav-toggle--no-js" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--no-js">
       <ul class="main-nav__list nav-list">
         <li class="nav-list__item nav-list__item--active"><a>Главная</a></li>
         <li class="nav-list__item"><a>Каталог продукции</a></li>
@@ -176,6 +172,7 @@
       </ul>
     </div>
   </footer>
+  <script src="./js/toggle-button.js"></script>
 </body>
 
 </html>
