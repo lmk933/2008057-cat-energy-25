@@ -1,6 +1,7 @@
-@use "utils" as *;
-@use "fonts" as *;
-@use "global" as *;
+@use "utils"as *;
+@use "fonts"as *;
+@use "global"as *;
+@use "colors"as *;
 
 .advantages {
   @include reset-headers;
@@ -14,15 +15,104 @@
   font-size: 36px;
   line-height: 40px;
   font-family: $accent-font-family;
+  padding-bottom: 40px;
 }
 
 .advantages__list {
   display: grid;
+  row-gap: 20px;
+}
+
+.advantages__item {
+  display: grid;
+  grid-template-areas:
+    "logo description";
+  align-items: center;
+  column-gap: 20px;
+}
+
+.advantages__logo {
+  width: 60px;
+  height: 60px;
+  background-color: $basic-green-color;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  grid-area: logo;
+}
+
+.advantages__description {
+  grid-area: description;
+}
+
+.advantages__item--healthy .advantages__logo {
+  background-image: url('../../img/icon_leaf.svg');
+}
+
+.advantages__item--easy .advantages__logo {
+  background-image: url('../../img/icon_tub.svg');
+}
+
+.advantages__item--saving .advantages__logo {
+  background-image: url('../../img/icon_eat.svg');
+}
+
+.advantages__item--fast-result .advantages__logo {
+  background-image: url('../../img/icon_alarm.svg');
 }
 
 @media (min-width: $tablet-width) {
   .advantages__list {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 180px;
+  }
+
+  .advantages__item {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    grid-template-areas: none;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+
+    align-items: center;
+    row-gap: 30px;
+    width: 250px;
+  }
+
+  .advantages__logo {
+    width: 80px;
+    height: 80px;
+    background-size: 30px;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .advantages__description {
+    font-size: 16px;
+    grid-area: 2 / 1 / -1 / -1;
+  }
+
+  .advantages__item::before {
+    font-size: 280px;
+    color: #F2F2F2;
+    font-family: $accent-font-family;
+    grid-area: 1 / 2 / -1 / -1;
+    justify-self: end;
+  }
+
+  .advantages__item--healthy::before {
+    content: "1";
+  }
+
+  .advantages__item--easy::before {
+    content: "2";
+  }
+
+  .advantages__item--saving::before {
+    content: "3";
+  }
+
+  .advantages__item--fast-result::before {
+    content: "4";
   }
 }
 
@@ -30,5 +120,7 @@
   .advantages__list {
     grid-template-columns: none;
     grid-auto-flow: column;
+    column-gap: normal;
+    justify-content: space-between;
   }
 }
