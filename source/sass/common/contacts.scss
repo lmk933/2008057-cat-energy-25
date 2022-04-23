@@ -6,8 +6,10 @@
   @include reset-address;
 
   .contacts__label-wrapper {
-    padding: 26px 20px 26px 20px;
     display: flex;
+    justify-content: space-between;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 
   .contacts__label-slogan {
@@ -22,6 +24,9 @@
   }
 
   .contacts__map {
-    width: 100%;
+    width: 100vw;
+    height: 362px;
+    margin-left: calc(-1 * var(--main-container-horizontal-padding));
+    border: none;
   }
 }

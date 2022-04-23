@@ -1,7 +1,27 @@
-@use "utils" as *;
+@use "utils"as *;
+@use "global" as *;
 
 .copyright {
   @include reset-paragraph;
+  @include reset-link;
   font-size: 16px;
   line-height: 18px;
+}
+
+.copyright__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__link-icon {
+  width: 27px;
+  height: 34px;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__content {
+    padding-right: 22px;
+  }
 }
