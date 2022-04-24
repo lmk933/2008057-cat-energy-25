@@ -7,7 +7,6 @@
   @include reset-list;
   margin-left: calc(-1 * var(--main-container-horizontal-padding));
   margin-right: calc(-1 * var(--main-container-horizontal-padding));
-  background-color: $basic-white-color;
   position: absolute;
   top: $mobile-header-height;
   left: 0;

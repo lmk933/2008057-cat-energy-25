@@ -51,6 +51,7 @@
 }
 
 .main-header__nav-toggle--nav-opened {
+
   &::before,
   &::after {
     content: "";
@@ -110,7 +111,6 @@
 
 @media (min-width: $desktop-width) {
   .main-header {
-    position: relative;
     z-index: 1;
   }
 

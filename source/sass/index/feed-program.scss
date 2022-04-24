@@ -15,6 +15,7 @@
   display: grid;
   justify-items: center;
   position: relative;
+  height: 480px;
 }
 
 .feed-program__header-wrapper {
@@ -37,11 +38,23 @@
   text-align: center;
 }
 
-.feed-program__get-programm {
+.feed-program__get-programm-bottom {
   height: 40px;
 }
 
+.feed-program__get-programm-top {
+  height: 40px;
+  display: none;
+}
+
 .feed-program__photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.feed-programm__photo-wrapper {
   height: 270px;
   grid-column: 1/-1;
   grid-row: 2/3;
@@ -53,26 +66,29 @@
   content: " ";
   color: $basic-white-color;
   height: 300px;
-  left: 0;
-  right: 0;
   position: absolute;
   background-image: linear-gradient(to top, $gift-background-color, $gift-background-color),
     url("../../img/food-programm-background-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
+  width: 100vw;
+  margin-left: calc(-1 * var(--main-container-horizontal-padding));
 }
 
 @media (min-width: $tablet-width) {
   .feed-program__wrapper {
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(1, auto);
     margin-left: 90px;
+    height: 870px;
   }
 
   .feed-program__header-wrapper {
     grid-area: 1 / 1 / 1 / 1;
     margin-right: auto;
     z-index: 1;
+    padding-bottom: 0;
+    margin-bottom: auto;
   }
 
   .feed-program__header {
@@ -82,14 +98,16 @@
   }
 
   .feed-program__slogan {
+    padding-top: 40px;
     text-align: start;
     line-height: 20px;
     font-size: 20px;
   }
 
-  .feed-program__photo {
+  .feed-programm__photo-wrapper {
     height: 610px;
-    grid-area: 2 / 1 / 3 / 1;
+    grid-area: 1 / 1 / -1 / -1;
+    margin-top: auto;
   }
 
   .feed-program__get-programm {
@@ -98,24 +116,51 @@
     z-index: 1;
   }
 
+  .feed-program__get-programm-bottom {
+    display: none;
+  }
+
+  .feed-program__get-programm-top {
+    padding-top: 50px;
+    height: 40px;
+    display: block;
+  }
+
   .feed-program::before {
     display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .feed-program {
+    height: 696px;
+    padding-top: 0;
+  }
+
   .feed-program__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .feed-program__photo {
+  .feed-program__header-wrapper {
+    margin-right: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .feed-programm__photo-wrapper {
     height: 500px;
     grid-column: 1/-1;
     grid-row: 1/-1;
+    margin-top: 0;
+    margin-left: 15%;
   }
 
-  .feed-program__get-programm {
-    grid-area: 2 / 1 / 2 / 1;
-    padding: 14px 26px;
+  .feed-program::before {
+    display: block;
+    left: calc(50% + var(--main-container-horizontal-padding));
+    top: 0;
+    right: 0;
+    height: 696px;
+    width: auto;
   }
 }
