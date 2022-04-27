@@ -21,6 +21,8 @@ body {
 
 :root {
   --main-container-horizontal-padding: 20px;
+  --slider-image-width: 280px;
+  --slider-image-height: 232px;
 }
 
 $tablet-width: 768px;
@@ -29,9 +31,14 @@ $max-content-width: 1440px;
 $min-content-width: 320px;
 $mobile-header-height: 65px;
 
+$slider-image-width: 280px;
+$slider-image-height: 232px;
+
 @media (min-width: $tablet-width) {
   :root {
     --main-container-horizontal-padding: 30px;
+    --slider-image-width: 592px;
+    --slider-image-height: 510px;
   }
 }
 @media (min-width: $desktop-width) {

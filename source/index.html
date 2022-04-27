@@ -120,10 +120,17 @@
           </div>
         </div>
         <div class="example__slider">
-          <img class="example__slider-image-before" src="img/before.png" alt="До">
-          <img class="example__slider-image-after" src="img/after.png" alt="После">
+          <div class="example__slider-image-wrapper">
+            <div class="example__slider-image example__slider-image--overlay">
+              <img src="./img/cat-fat.png" alt="До">
+            </div>
+            <div class="example__slider-image">
+              <img src="./img/cat-skinny.png" alt="После">
+            </div>
+          </div>
           <div class="example__slider-range-wrapper">
             <span>Было</span>
+            <input class="example__slider-range" type="range" min="0" max="100" step="1" value="100">
             <span>Стало</span>
           </div>
         </div>
@@ -209,6 +216,8 @@
     </div>
   </footer>
   <script src="./js/toggle-button.js"></script>
+  <script src="./js/set-range.js"></script>
+
 </body>
 
 </html>
