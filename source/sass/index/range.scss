@@ -1,0 +1,79 @@
+@use "utils" as *;
+@use "colors" as *;
+@use "fonts" as *;
+@use "global" as *;
+@use "sass:math";
+
+.range {
+  display: flex;
+  justify-content: stretch;
+}
+
+.range__scale {
+  position: relative;
+  margin: auto 13px;
+  height: 14px;
+  background-color: $basic-white-color;
+  border-radius: 6px;
+  border: 1px solid $special-grey-color;
+  width: 86px;
+}
+
+.range__bar {
+  position: absolute;
+  height: 6px;
+  top: calc(50% - 6px/2);
+  left: 6px;
+  right: 50%;
+  border-radius: 3px;
+  background-color: $basic-green-color;
+}
+
+.range__toggle {
+  display: none;
+}
+
+.range__label {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .range__scale {
+    background-color: #DCDCDC;
+    height: 6px;
+    border: none;
+    width: auto;
+    flex: auto;
+  }
+
+  .range__bar {
+    width: 34px;
+    height: 34px;
+    background-color: $basic-white-color;
+    border: 1px solid $special-grey-color;
+    border-radius: 50%;
+    cursor: pointer;
+    left: auto;
+    right: 50%;
+    top: calc(50% - 34px/2);
+  }
+
+  .range__toggle {
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    top: calc(50% - 8px/2);
+    left: calc(50% - 8px/2);
+    border-radius: 50%;
+    background-color: $basic-green-color;
+    display: block;
+  }
+
+  .range__label {
+    border-bottom: 1px dotted black;
+  }
+
+}

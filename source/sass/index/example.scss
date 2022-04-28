@@ -2,62 +2,107 @@
 @use "colors" as *;
 @use "fonts" as *;
 @use "global" as *;
+@use "sass:math";
+
+$example-background-color: #eaeaea;
 
 .example {
   @include reset-headers;
   @include reset-paragraph;
-  background-color: $basic-gray-color;
+  background-color: $example-background-color;
   color: $basic-black-color;
   padding-top: 25px;
   padding-bottom: 40px;
-
-  .example__title {
-    font-size: 36px;
-    line-height: 40px;
-    font-family: $accent-font-family;
-  }
-
-  .example__metrics-value {
-    font-size: 24px;
-    line-height: 24px;
-    text-transform: uppercase;
-    font-family: $accent-font-family;
-  }
-
-  .example__metrics-description {
-    font-size: 12px;
-    line-height: 12px;
-    text-transform: lowercase;
-  }
-
-  .example__feed-price {
-    font-size: 14px;
-    line-height: 20px;
-    text-transform: uppercase;
-    font-family: $accent-font-family;
-  }
-
-  .example__slider-range-wrapper {
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    font-family: $accent-font-family;
-    display: flex;
-    justify-content: center;
-
-    span,
-    input {
-      display: block;
-    }
-  }
+  margin: 0 calc(-1 * var(--main-container-horizontal-padding));
+  padding-left: calc(var(--main-container-horizontal-padding));
+  padding-right: calc(var(--main-container-horizontal-padding));
 }
+
 .example__wrapper {
+  display: grid;
+  align-items: center;
+  row-gap: 20px;
+  grid-template-areas: "title"
+    "description"
+    "metrics"
+    "price"
+    "slider";
+  grid-template-rows: repeat(5, auto);
+}
+
+.example__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-family: $accent-font-family;
+  padding-bottom: 20px;
+  grid-area: title;
+}
+
+.example__description {
+  grid-area: description;
+}
+
+.example__metrics-list {
+  margin: 0;
+  grid-area: metrics;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
+.example__metrics-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $special-grey-color;
+  padding: 15px 0;
+  border-radius: 5px;
+  width: 124px;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.example__metrics-value {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-family: $accent-font-family;
+  padding-bottom: 18px;
+}
+
+.example__metrics-description {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+  padding: 0 10px;
+  text-align: center;
+  background-color: $example-background-color;
+  margin: 0;
+}
+
+.example__feed-price {
+  grid-area: price;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-family: $accent-font-family;
+  justify-self: center;
+
+  br {
+    display: none;
+  }
+}
+
+.example__slider-range {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-family: $accent-font-family;
+}
+
 .example__slider {
+  margin: 0 auto;
+  grid-area: slider;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -87,12 +132,118 @@
 }
 
 .example__slider-image--overlay {
-  background-color: #EAEAEA;
+  background-color: $example-background-color;
   z-index: 1;
 }
 
-@media (min-width: $desktop-width) {
-  .example__wrapper {
-    flex-direction: row;
+@media (min-width: $tablet-width) {
+  .example {
+    background: linear-gradient(to top, $example-background-color, $example-background-color 462px, $basic-white-color 462px, $basic-white-color 100%);
   }
+
+  .example__wrapper {
+    align-items: center;
+    row-gap: 50px;
+    grid-template-areas: "title title"
+      "description description"
+      "metrics price"
+      "slider slider";
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: auto 1fr;
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 20px;
+  }
+
+  .example__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__metrics-item {
+    width: 162px;
+    height: 77px;
+  }
+
+  .example__metrics-value {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__feed-price {
+    font-size: 20px;
+    line-height: 30px;
+    justify-self: end;
+    text-align: end;
+
+    br {
+      display: inline;
+    }
+  }
+
+  .example__metrics-description {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $basic-white-color;
+
+    br {
+      display: none;
+    }
+  }
+
+  .example__metrics-item:not(:last-child) {
+    margin-right: 42px;
+  }
+
+  .example__slider {
+    padding-top: 30px;
+    align-items: stretch;
+
+  }
+
+  .example__slider-range {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .example__slider-image--overlay {
+    background: linear-gradient(to top, #eaeaea, #eaeaea 361px, #ffffff 361px, #ffffff 100%);
+    right: 50%;
+    z-index: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .example__wrapper {
+    align-items: center;
+    column-gap: 193px;
+    grid-template-areas: "title slider"
+      "description slider"
+      "metrics slider"
+      "price slider";
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1f auto;
+  }
+
+  .example__feed-price {
+    justify-self: start;
+
+    br {
+      display: none;
+    }
+  }
+
+  .example__metrics-list {
+    justify-content: start;
+  }
+
+  .example__metrics-description {
+    background-color: $example-background-color;
+  }
+
 }
