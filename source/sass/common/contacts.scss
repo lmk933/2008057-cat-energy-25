@@ -1,32 +1,75 @@
 @use "utils" as *;
 @use "fonts" as *;
+@use "colors" as *;
+@use "global" as *;
 
 .contacts {
   @include reset-paragraph;
   @include reset-address;
+}
 
-  .contacts__label-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 26px;
-    padding-bottom: 26px;
+.contacts__wrapper {
+  margin-left: calc(-1 * var(--main-container-horizontal-padding));
+  padding: 0 calc(var(--main-container-horizontal-padding));
+  background-color: $basic-white-color;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.contacts__label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.contacts__label-slogan {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $accent-font-family;
+  text-transform: uppercase;
+}
+
+.contacts__label-address {
+  line-height: 20px;
+}
+
+.contacts__map {
+  display: block;
+  width: 100vw;
+  height: 362px;
+  margin-left: calc(-1 * var(--main-container-horizontal-padding));
+  border: none;
+  max-width: 1440px;
+}
+
+@media (min-width: $desktop-width) {
+
+  .contacts {
+    position: relative;
   }
 
-  .contacts__label-slogan {
-    font-size: 16px;
-    line-height: 20px;
-    font-family: $accent-font-family;
-    text-transform: uppercase;
+  .contacts__wrapper {
+    margin-left: 0;
+    padding: 0;
+    width: 565px;
+    position: absolute;
+    z-index: 1;
+    top: 95px;
+  }
+
+  .contacts__label-wrapper {
+    padding: 60px 80px;
   }
 
   .contacts__label-address {
+    font-size: 16px;
     line-height: 20px;
   }
 
-  .contacts__map {
-    width: 100vw;
-    height: 362px;
-    margin-left: calc(-1 * var(--main-container-horizontal-padding));
-    border: none;
+  .contacts__label-slogan {
+    font-size: 20px;
+    line-height: 26px;
   }
+
 }
